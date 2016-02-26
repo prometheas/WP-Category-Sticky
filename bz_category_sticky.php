@@ -80,7 +80,7 @@ class bz_category_sticky
             'bz_category_sticky_sectionid',
             __( 'Category Sticky', 'bz_category_sticky_textdomain' ),
             array($this, 'bz_category_sticky_inner_custom_box'),
-            'post' 
+            'post', 'normal', 'low'
         );
     }
 
