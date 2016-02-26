@@ -1,0 +1,13 @@
+{
+    "name": "prometheas/category-sticky-posts",
+    "description": "Allows you to set Sticky posts for individual category archives.",
+    "type": "wordpress-plugin",
+    "license": "GPL v2",
+    "authors": [
+        {
+            "name": "Brian Zeligson",
+            "email": "beezee@users.github.com"
+        }
+    ],
+    "require": {}
+}
