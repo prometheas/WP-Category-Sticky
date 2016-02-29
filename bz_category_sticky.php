@@ -5,7 +5,7 @@
   Plugin URI: http://www.workinginboxershorts.com/wordpress-custom-taglines
   Description: Set sticky posts for individual category archives
   Author: Brian Zeligson
-  Version: 0.14
+  Version: 0.15
   Author URI: http://www.workinginboxershorts.com
 
   ==
@@ -80,12 +80,16 @@ class bz_category_sticky
 
     public function bz_category_sticky_add_custom_box()
     {
-        add_meta_box(
-            'bz_category_sticky_sectionid',
-            __('Category Sticky', 'bz_category_sticky_textdomain'),
-            array($this, 'bz_category_sticky_inner_custom_box'),
-            'post', 'normal', 'low'
-        );
+        $supported_post_types = apply_filter('bz_category_sticky:post_type:support', array('post'));
+
+        foreach ($supported_post_types as $post_type) {
+            add_meta_box(
+                'bz_category_sticky_sectionid',
+                __('Category Sticky', 'bz_category_sticky_textdomain'),
+                array($this, 'bz_category_sticky_inner_custom_box'),
+                $post_type, 'normal', 'low'
+            );
+        }
     }
 
     public function bz_category_sticky_inner_custom_box()
