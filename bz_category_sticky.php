@@ -5,7 +5,7 @@
   Plugin URI: http://www.workinginboxershorts.com/wordpress-custom-taglines
   Description: Set sticky posts for individual category archives
   Author: Brian Zeligson
-  Version: 0.16
+  Version: 0.15.2
   Author URI: http://www.workinginboxershorts.com
 
   ==

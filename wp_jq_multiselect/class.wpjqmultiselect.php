@@ -52,7 +52,7 @@ class WpJqMultiSelect
     {
         if ($admin) {
           add_action('admin_enqueue_scripts', array($this, 'enqueue_js'));
-          add_action('admin_print_styles', array($this, 'enqueue_styles')); else:
+          add_action('admin_print_styles', array($this, 'enqueue_styles'));
           add_action('wp_enqueue_scripts', array($this, 'enqueue_js'));
           add_action('wp_print_styles', array($this, 'enqueue_styles'));
         }
